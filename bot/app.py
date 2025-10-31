@@ -104,9 +104,10 @@ async def run_polling(application: Application) -> None:
 
     # Keep the bot running
     try:
-        # This will block until the application is stopped
-        await application.updater.idle()
-    except KeyboardInterrupt:
+        # Wait forever
+        import asyncio
+        await asyncio.Event().wait()
+    except (KeyboardInterrupt, asyncio.CancelledError):
         logger.info("Received interrupt signal, shutting down...")
     finally:
         # Cleanup
