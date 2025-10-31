@@ -1,0 +1,15 @@
+# Core bot framework
+python-telegram-bot[ext]>=22.5,<23.0
+
+# Database ORM and migrations
+SQLAlchemy>=2.0,<3.0
+alembic>=1.13,<2.0
+
+# MySQL driver
+PyMySQL>=1.1,<2.0
+
+# Environment variables
+python-dotenv>=1.0,<2.0
+
+# Web server for webhook mode (production)
+aiohttp>=3.9,<4.0
